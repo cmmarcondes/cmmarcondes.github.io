@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sortei.AI — Suporte</title>
+  <meta name="description" content="Central de ajuda do Sortei.AI. Aprenda a usar, tire dúvidas, resolva problemas e fale com o suporte." />
+  https://seu-dominio.com/suporte
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sortei.AI — Suporte" />
+  <meta property="og:description" content="Aprenda a usar, tire dúvidas, resolva problemas e fale com o suporte do Sortei.AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seu-dominio.com/suporte" />
+  <meta property="og:image" content="https://seu-dominio.com/assets/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sortei.AI — Suporte" />
+  <meta name="twitter:description" content="Ajuda, FAQs e contato do suporte do Sortei.AI." />
+  <meta name="twitter:image" content="https://seu-dominio.com/assets/og-image.png" />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #151720;
+      --text: #e7ecf3;
+      --muted: #b7c1d1;
+      --accent: #7c5cff;
+      --accent-2: #5cc9ff;
+      --border: #263047;
+      --success: #3ddc84;
+      --warning: #ffcc00;
+      --danger: #ff6b6b;
+      --focus: #89b4ff;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fb;
+        --card: #ffffff;
+        --text: #0e1320;
+        --muted: #4b5565;
+        --border: #e6e8ef;
+        --shadow: 0 8px 24px rgba(16,24,40,.08);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; }
+
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; outline: none; }
+
+    .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+
+    header.hero {
+      padding: 32px 0 8px;
+    }
+
+    .brand {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+    }
+    .logo {
+      width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: var(--shadow);
+    }
+    h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 6px; letter-spacing: -0.02em; }
+    .subtitle { color: var(--muted); margin: 0 0 16px; }
+
+    nav.quick {
+      display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 28px;
+    }
+    nav.quick a {
+      display: inline-block; padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px; background: transparent; color: var(--text);
+    }
+    nav.quick a:hover { border-color: var(--accent); }
+
+    .callouts {
+      display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 8px;
+    }
+    @media (min-width: 720px) { .callouts { grid-template-columns: 1fr 1fr; } }
+
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: var(--shadow);
+    }
+    .card h2 { margin-top: 0; }
+    .badge-store {
+      display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--border); padding: 12px 16px; border-radius: 12px; color: var(--text); background: #000; font-weight: 600;
+    }
+    .badge-store img { width: 22px; height: 22px; }
+    .btn {
+      display: inline-block; padding: 10px 16px; border-radius: 10px; border: 1px solid transparent; background: var(--accent); color: #fff; font-weight: 700; box-shadow: var(--shadow);
+    }
+    .btn:hover { filter: brightness(1.05); }
+
+    section { margin: 28px 0; }
+    section h2 { font-size: clamp(22px, 3.8vw, 28px); margin-bottom: 8px; }
+    .muted { color: var(--muted); }
+
+    ol.steps { padding-left: 18px; }
+    ol.steps li { margin: 8px 0; }
+
+    details.faq { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin: 10px 0; }
+    details.faq summary { cursor: pointer; font-weight: 700; }
+    details.faq[open] summary { color: var(--accent); }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    @media (min-width: 860px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+    .label { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0; margin-top: 24px; color: var(--muted);
+    }
+
+    .top-link { position: fixed; right: 20px; bottom: 20px; opacity: 0.85; }
+    .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; padding: 0; }
+
+    /* Focus visible */
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+  </style>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como criar times rapidamente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Abra o Sortei.AI, digite os nomes dos jogadores, defina a quantidade de times e toque em Sortear. Você pode compartilhar o resultado em seguida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso definir o número de jogadores por equipe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Ajuste o tamanho das equipes ou a quantidade de times. O app distribui automaticamente os jogadores restantes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O app funciona offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, o sorteio funciona offline. Alguns recursos, como compartilhamento avançado e atualizações, requerem internet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais dados pessoais o Sortei.AI coleta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apenas o necessário para o funcionamento e melhorias do app. Consulte a Política de Privacidade para detalhes e como gerenciar consentimentos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como reporto um problema?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Envie um e-mail para carlosmagnocedaspy@gmail.com informando: descrição do problema, passos para reproduzir, versão do iOS, modelo do dispositivo e versão do app (em Configurações > Sobre)."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- App structured data (opcional) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sortei.AI",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "iOS",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+    "url": "SEU_LINK_APP_STORE"
+  }
+  </script>
+</head>
+<body>
+  #conteudoPular para o conteúdo</a>
+
+  <div class="container">
+    <header class="hero" role="banner">
+      <div class="brand" aria-label="Identidade do app">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Sortei.AI — Suporte</h1>
+          <p class="subtitle">Ajuda oficial, perguntas frequentes e contato.</p>
+        </div>
+      </div>
+
+      <nav class="quick" aria-label="Links rápidos">
+        #como-usarComo usar</a>
+        #recursosRecursos</a>
+        #faqFAQ</a>
+        #solucaoSolução de problemas</a>
+        #privacidadePrivacidade</a>
+        #acessibilidadeAcessibilidade</a>
+        #contatoContato</a>
+      </nav>
+
+      <div class="callouts">
+        <div class="card" aria-labelledby="baixar">
+          <h2 id="baixar">Baixar o app</h2>
+          <p class="muted">Instale o Sortei.AI no seu iPhone e comece a montar times em segundos.</p>
+          <p>
+              https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg
+              <span>Disponível na App Store</span>
+            </a>
+          </p>
+          <p><span class="label">iOS</span> <span class="label">Grupos & Times</span></p>
+        </div>
+
+        <div class="card" aria-labelledby="status">
+          <h2 id="status">Status & Atualizações</h2>
+          <p class="muted">Confira se há incidentes, novidades e versões recentes.</p>
+          <p>
+            Ver status do serviço</a>
+          </p>
+          <ul class="muted" style="padding-left:18px;">
+            <li><strong>Última atualização:</strong> 07 nov 2025</li>
+            <li><strong>Versão atual:</strong> 1.0.0 (exemplo)</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo" role="main">
+      <section id="como-usar" aria-labelledby="como-usar-titulo">
+        <h2 id="como-usar-titulo">Como usar o Sortei.AI</h2>
+        <ol class="steps">
+          <li>Abra o app e toque em <strong>Novo sorteio</strong>.</li>
+          <li>Digite os <strong>nomes dos jogadores</strong> (um por linha) ou cole de uma lista.</li>
+          <li>Escolha <strong>quantos times</strong> deseja ou o <strong>tamanho das equipes</strong>.</li>
+          <li>Toque em <strong>Sortear</strong>. Pronto! Os times aparecem na tela.</li>
+          <li>Use <strong>Compartilhar</strong> para enviar os times por mensagem ou salvar como imagem.</li>
+        </ol>
+        <p class="muted">Dica: nomes repetidos são detectados para evitar duplicidade.</p>
+      </section>
+
+      <section id="recursos" aria-labelledby="recursos-titulo">
+        <h2 id="recursos-titulo">Principais recursos</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Sorteio rápido e justo</h3>
+            <p>Distribuição aleatória instantânea, sem favoritismo.</p>
+          </div>
+          <div class="card">
+            <h3>Controle do tamanho dos times</h3>
+            <p>Defina quantidade de equipes ou jogadores por time; o app ajusta automaticamente.</p>
+          </div>
+          <div class="card">
+            <h3>Funciona offline</h3>
+            <p>O sorteio acontece mesmo sem internet; recursos online são opcionais.</p>
+          </div>
+          <div class="card">
+            <h3>Compartilhamento fácil</h3>
+            <p>Envie o resultado por apps de mensagem ou salve como imagem.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-titulo">
+        <h2 id="faq-titulo">Perguntas frequentes (FAQ)</h2>
+
+        <details class="faq">
+          <summary>Como criar times rapidamente?</summary>
+          <p>Digite os nomes, escolha a quantidade de times e toque em <em>Sortear</em>. Em segundos você tem os grupos prontos.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Posso definir jogadores por equipe em vez de número de times?</summary>
+          <p>Sim. Selecione o modo <strong>Tamanho das equipes</strong>. Jogadores excedentes são distribuídos automaticamente.</p>
+        </details>
+
+        <details class="faq">
+          <summary>O app salva minhas listas de jogadores?</summary>
+          <p>Você pode salvar listas frequentes (se habilitado no app). Para excluir, vá em <strong>Listas</strong> &gt; segure uma lista &gt; <strong>Apagar</strong>.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Funciona sem internet?</summary>
+          <p>Sim, o sorteio é local. Internet é necessária apenas para recursos como compartilhamento avançado e atualização do app.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Quais dados pessoais o Sortei.AI coleta?</summary>
+          <p>Coletamos somente o essencial para funcionamento e melhorias. Veja a <a href="https://www.iubenda.com/privacy-policy/59220633">Política de Privacidade</a> para detalhes, opt‑out e direitos.</p>
+        </details>
+
+        <details class="faq">
+          <summary>Como reporto um bug ou solicito um recurso?</summary>
+          <p>Envie um e-mail para <a href="mailto:carlosmagnocedaspy@gmail.com">carlosmagnocedaspy@gmail.com</a> com: descrição, passos, capturas de tela (se possível), versão do iOS, modelo do iPhone e versão do app.</p>
+        </details>
+
+      </section>
+
+      <section id="solucao" aria-labelledby="solucao-titulo">
+        <h2 id="solucao-titulo">Solução de problemas</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>O sorteio não responde</h3>
+            <ul>
+              <li>Feche e reabra o app.</li>
+              <li>Verifique se há atualização disponível na App Store.</li>
+              <li>Reinicie o iPhone se o problema persistir.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Nomes duplicados</h3>
+            <ul>
+              <li>Use uma linha por jogador.</li>
+              <li>Ative a opção “Evitar duplicados” (se disponível nas configurações).</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Compartilhamento falhou</h3>
+            <ul>
+              <li>Conecte-se à internet.</li>
+              <li>Tente salvar como imagem e compartilhar pelo app de fotos.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Resultados inesperados</h3>
+            <ul>
+              <li>Confirme a contagem de jogadores e o tamanho das equipes.</li>
+              <li>Apague espaços extras ou linhas vazias na lista.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacidade" aria-labelledby="privacidade-titulo">
+        <h2 id="privacidade-titulo">Privacidade & dados</h2>
+        <p>Levamos a privacidade a sério. O Sortei.AI processa sorteios localmente e armazena dados apenas quando necessário. Detalhes completos, base legal, tempo de retenção, compartilhamentos e direitos do titular estão em nossa <a href="https://www.iubenda.com/privacy-policy/59220633">Política de Privacidade</a>.</p>
+      </section>
+
+      <section id="acessibilidade" aria-labelledby="acessibilidade-titulo">
+        <h2 id="acessibilidade-titulo">Acessibilidade</h2>
+        <p>Compatível com <strong>VoiceOver</strong>, <strong>Tamanhos Dinâmicos</strong> e contraste aprimorado. Se precisar de ajustes, escreva para <a href="mailto:carlosmagnocedaspy@gmail.com">carlosmagnocedaspy@gmail.com</a>.</p>
+      </section>
+
+      <section id="contato" aria-labelledby="contato-titulo">
+        <h2 id="contato-titulo">Fale com o suporte</h2>
+        <p>Envie um e‑mail para <a href="mailto:carlosmagnocedaspy@gmail.com">carlosmagnocedaspy@gmail.com</a>. Tempo médio de resposta: 1–2 dias úteis.</p>
+        <div class="card">
+          <h3>Para agilizar seu atendimento, inclua:</h3>
+          <ul>
+            <li>Descrição do problema e passos para reproduzir</li>
+            <li>Versão do iOS e modelo do dispositivo</li>
+            <li>Versão do app (Ajustes &gt; Sobre)</li>
+            <li>Capturas de tela ou vídeo (se possível)</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="container" style="padding:0;">
+        <p>&copy; <span id="ano"></span> Sortei.AI. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </div>
+
+  #conteudo↑</a>
+
+  <script>
+    // Atualiza ano automaticamente
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
